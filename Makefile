@@ -1,2 +1,2 @@
 build:
-	go build -o reform cmd/cmd.go
+	go build -o dist/reform cmd/cmd.go
