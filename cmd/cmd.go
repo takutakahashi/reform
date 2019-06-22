@@ -1,19 +1,17 @@
 package main
 
 import (
-	"exec"
-	"fmt"
+	"github.com/takutakahashi/reform/cmd/exec"
+	"github.com/takutakahashi/reform/cmd/repository"
 	"github.com/urfave/cli"
-	"io"
 	"os"
-	"repository"
 )
 
 var Version string = "0.9.0"
 
 var Commands = []cli.Command{
-	repository.Commands,
-	Exec.Commands,
+	repository.Command,
+	exec.Command,
 }
 
 func main() {

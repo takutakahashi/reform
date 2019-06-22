@@ -4,6 +4,14 @@ import (
 	"github.com/urfave/cli"
 )
 
+var Command = cli.Command{
+	Name:        "repository",
+	Usage:       "tbd",
+	Description: "repository command",
+	Aliases:     []string{"repo"},
+	Subcommands: Commands,
+}
+
 var Commands = []cli.Command{
 	commandList,
 	commandAdd,
@@ -12,7 +20,7 @@ var Commands = []cli.Command{
 
 var commandList = cli.Command{
 	Name:        "list",
-	usage:       "tbd",
+	Usage:       "tbd",
 	Description: "listing repository",
 	Action:      doList,
 }
@@ -21,7 +29,7 @@ func doList(c *cli.Context) {}
 
 var commandAdd = cli.Command{
 	Name:        "add",
-	usage:       "tbd",
+	Usage:       "tbd",
 	Description: "adding repository",
 	Action:      doAdd,
 }
@@ -30,7 +38,7 @@ func doAdd(c *cli.Context) {}
 
 var commandDelete = cli.Command{
 	Name:        "delete",
-	usage:       "tbd",
+	Usage:       "tbd",
 	Description: "deleting repository",
 	Action:      doDelete,
 }
